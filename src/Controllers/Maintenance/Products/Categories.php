@@ -14,6 +14,6 @@ class Categories extends PublicController{
     }
     public function run():void {
         $this -> viewData["categories"] = CategoriesDao::getCategories();
-        Renderer::render("maintence/products/caregories", $this -> viewData);
+        Renderer::render("maintenance/products/categories", $this -> viewData);
     }
 }

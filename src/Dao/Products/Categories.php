@@ -6,7 +6,7 @@ use Dao\Table;
 
 class Categories extends Table{
     public static function getCategories() {
-        $sqlstr = "SELECT * FROM categories";
+        $sqlstr = "SELECT * FROM categoria";
         return self::obtenerRegistros(
             $sqlstr,
             []
@@ -14,7 +14,7 @@ class Categories extends Table{
     }
     
     public static function getCategoriesById(int $id): array {
-        $sqlstr = "SELECT * FROM categories Where id = :idCategoria:";
+        $sqlstr = "SELECT * FROM categoria Where id = :idCategoria;";
         return self::obtenerUnRegistro($sqlstr,["idCategoria" => $id]);
     }
 }
