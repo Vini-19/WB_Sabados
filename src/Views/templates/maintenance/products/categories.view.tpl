@@ -8,7 +8,7 @@
                 <th>Category</th>
                 <th>Status</th>
                 <th>
-                    <a href="" class="">New</a>
+                    <a href="index.php?=Maintenance-Products-Category&mode=INS&id=" class="">New</a>
                 </th>
             </tr>
         </thead>
@@ -19,7 +19,16 @@
                 <td>{{categoria}}</td>
                 <td>{{estado}}</td>
                 <td>
-
+                    <a href="index.php?page=Maintenance-Products-Category&mode=INS&id={{id}}" >
+                        Editar
+                    </a>&nbsp;
+                    <a href="index.php?page=Maintenance-Products-Category&mode=DSP&id={{id}}" >
+                        Ver
+                    </a>
+                    &nbsp;
+                    <a href="index.php?page=Maintenance-Products-Category&mode=DEL&id={{id}}" >
+                        Eliminar
+                    </a>
                 </td>
             </tr>
             {{endfor categories}}
