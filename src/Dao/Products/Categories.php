@@ -4,17 +4,21 @@ namespace Dao\Products;
 
 use Dao\Table;
 
-class Categories extends Table{
-    public static function getCategories() {
-        $sqlstr = "SELECT * FROM categoria";
+class Categories extends Table
+{
+
+    public static function getCategories(): array
+    {
+        $sqlstr = "SELECT * FROM categorias;";
         return self::obtenerRegistros(
             $sqlstr,
             []
         );
     }
-    
-    public static function getCategoriesById(int $id): array {
-        $sqlstr = "SELECT * FROM categoria Where id = :idCategoria;";
-        return self::obtenerUnRegistro($sqlstr,["idCategoria" => $id]);
+
+    public static function getCategoriesById(int $id)
+    {
+        $sqlstr = "SELECT * from categorias where id = :idCategoria;";
+        return self::obtenerUnRegistro($sqlstr, ["idCategoria" => $id]);
     }
 }
